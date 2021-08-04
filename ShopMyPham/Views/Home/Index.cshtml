@@ -1,0 +1,1061 @@
+﻿@model dynamic
+@{
+    ViewBag.Title = "IMUA - Mỹ phẩm online chính hãng, Cam kết chất lượng, Mua là có quà";
+}
+<div class="banner">
+    <div class="container">
+        <div class="banner__img">
+            <a href="">
+                <img src="~/assets/img/mua-xuan-2020-0.jpg" alt="">
+            </a>
+        </div>
+        <div class="banner__service">
+            <div class="service__item">
+                <img src="~/assets/img/ho-tro-247--1.png" alt="">
+                <p>
+                    <strong>Hỗ trợ 24/7</strong>
+                    0911403114
+                </p>
+            </div>
+            <div class="service__item">
+                <img src="~/assets/img/thong-tin--1.png" alt="">
+                <p>
+                    <strong>Thông tin</strong>
+                    Bảo mật tuyệt đối
+                </p>
+            </div>
+            <div class="service__item">
+                <img src="~/assets/img/qua-tang--1.png" alt="">
+                <p>
+                    <strong>Quà tặng</strong>
+                    Mua là có quà
+                </p>
+            </div>
+            <div class="service__item">
+                <img src="~/assets/img/hoan-tra-tien--1.png" alt="">
+                <p>
+                    <strong>Hoàn trả tiền</strong>
+                    Trong 7 ngày
+                </p>
+            </div>
+            <div class="service__item">
+                <img src="~/assets/img/thanh-toan--1.png" alt="">
+                <p>
+                    <strong>Thanh toán</strong>
+                    Khi nhận hàng
+                </p>
+            </div>
+            <div class="service__item">
+                <img src="~/assets/img/giao-hang--1.png" alt="">
+                <p>
+                    <strong>Giao hàng</strong>
+                    Tận nơi toàn quốc
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="best__seller">
+    <div class="title">
+        <h4>sản phẩm bán chạy</h4>
+    </div>
+    <div class="container">
+        @foreach (var item in Model.SanPhamHot)
+        {
+            <div class="product">
+                <div class="product__thumb">
+                    @{
+                        string ImagePath = "~/assets/img/" + item.AnhDaiDien;
+                    }
+                    <a href="" class="product__img">
+                        <img src="@Url.Content(ImagePath)" alt="">
+                    </a>
+                    <a href="" class="product__quickview">xem nhanh</a>
+                    <div class="product__add--cart">
+                        <a href="">
+                            <i class="fas fa-shopping-basket"></i> Thêm giỏ hàng
+                        </a>
+                    </div>
+                </div>
+                <div class="product__info">
+                    <h3 class="product__title">
+                        <a href="">
+                            @item.TenSP
+                        </a>
+                    </h3>
+                    <div class="product__price">
+                        <ins class="product__price--new">@string.Format("{0:c0}", item.GiaCu)</ins>
+                        <del class="product__price--old">@string.Format("{0:c0}", item.GiaMoi)</del>
+                    </div>
+                </div>
+            </div>
+        }
+        <div class="product">
+            <div class="product__thumb">
+                <a href="" class="product__img">
+                    <img src="~/assets/img/Sua-Duong-The-Vaseline-30x-Chinh-Hang-.jpg" alt="">
+                </a>
+                <a href="" class="product__quickview">xem nhanh</a>
+                <div class="product__add--cart">
+                    <a href="">
+                        <i class="fas fa-shopping-basket"></i> Thêm giỏ hàng
+                    </a>
+                </div>
+            </div>
+            <div class="product__info">
+                <h3 class="product__title">
+                    <a href="">Sữa Dưỡng Thể Vaseline 30x Chính Hãng</a>
+                </h3>
+                <div class="product__price">
+                    <ins class="product__price--new">230.000 đ</ins>
+                    <del class="product__price--old">285.000 đ</del>
+                </div>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product__thumb">
+                <a href="" class="product__img">
+                    <img src="~/assets/img/Kem-tri-seo-Scar-Esthetique-10gr-.jpg" alt="">
+                </a>
+                <a href="" class="product__quickview">xem nhanh</a>
+                <div class="product__add--cart">
+                    <a href="">
+                        <i class="fas fa-shopping-basket"></i> Thêm giỏ hàng
+                    </a>
+                </div>
+            </div>
+            <div class="product__info">
+                <h3 class="product__title">
+                    <a href="">Kem Trị Sẹo Scar Esthetique Mỹ - Xóa Mờ Sẹo Thâm, Lồi, Lõm Mới Và Lâu Năm</a>
+                </h3>
+                <div class="product__price">
+                    <ins class="product__price--new">335.000 đ</ins>
+                    <del class="product__price--old">450.000 đ</del>
+                </div>
+            </div>
+        </div>
+        <div class="product">
+            <div class="product__thumb">
+                <a href="" class="product__img">
+                    <img src="~/assets/img/Kem-Chong-Nang-Ice-Sun-Nature-Republic-SPF50-.jpg" alt="">
+                </a>
+                <a href="" class="product__quickview">xem nhanh</a>
+                <div class="product__add--cart">
+                    <a href="">
+                        <i class="fas fa-shopping-basket"></i> Thêm giỏ hàng
+                    </a>
+                </div>
+            </div>
+            <div class="product__info">
+                <h3 class="product__title">
+                    <a href="">Kem Chống Nắng Ice Sun Nature Republic SPF50+</a>
+                </h3>
+                <div class="product__price">
+                    <ins class="product__price--new">240.000 đ</ins>
+                    <del class="product__price--old">280.000 đ</del>
+                </div>
+            </div>
+        </div>
+        <div class="product">
+            <div class="product__thumb">
+                <a href="" class="product__img">
+                    <img src="~/assets/img/Sac-Moc-Lam-Tri-Mun-Nam-Tan-Nhang-.jpg" alt="">
+                </a>
+                <a href="" class="product__quickview">xem nhanh</a>
+                <div class="product__add--cart">
+                    <a href="">
+                        <i class="fas fa-shopping-basket"></i> Thêm giỏ hàng
+                    </a>
+                </div>
+            </div>
+            <div class="product__info">
+                <h3 class="product__title">
+                    <a href="">Sắc Mộc Lam Trị Mụn, Nám, Tàn Nhang</a>
+                </h3>
+                <div class="product__price">
+                    <ins class="product__price--new">450.000 đ</ins>
+                    <del class="product__price--old">570.000 đ</del>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@foreach (var danhMuc in Model.DanhMuc)
+{
+    <div class="category">
+       <div class="category__nav">
+            <a href="">
+                <h2>@danhMuc.TenDM<h2>
+            </a>
+            <div class="navbar">
+                <ul>
+                    @{ Html.RenderAction("LoaiSanPham", "Home",new { id = danhMuc.MaDM }); }
+                </ul>
+                
+            </div>
+            <a href="" class="category__more">Xem thêm</a>
+       </div>
+        <div class="category__content">
+            <div class="container">
+                <div class="content__left">
+                    <div class="content__banner">
+                        <a href="">
+                            <img src="~/assets/img/my-pham-trang-diem-menu-left.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="content__right">
+                    <div class="content__item">
+                        @{ Html.RenderAction("SanPham", "Home", new { id = danhMuc.MaDM });}
+                        @*
+
+                    <div class="product">
+                        <div class="product__thumb">
+                            <a href="" class="product__img">
+                                <img src="~/assets/img/Sac-Moc-Lam-Tri-Mun-Nam-Tan-Nhang-.jpg" alt="">
+                            </a>
+                            <a href="" class="product__quickview">xem nhanh</a>
+                            <div class="product__add--cart">
+                                <a href="">
+                                    <i class="fas fa-shopping-basket"></i> Thêm giỏ hàng
+                                </a>
+                            </div>
+                        </div>
+                        <div class="product__info">
+                            <h3 class="product__title">
+                                <a href="">Sắc Mộc Lam Trị Mụn, Nám, Tàn Nhang</a>
+                            </h3>
+                            <div class="product__price">
+                                <ins class="product__price--new">450.000 đ</ins>
+                                <del class="product__price--old">570.000 đ</del>
+                            </div>
+                        </div>
+                    </div>*@
+                        <div class="product">
+                            <div class="product__thumb">
+                                <a href="" class="product__img">
+                                    <img src="~/assets/img/Sac-Moc-Lam-Tri-Mun-Nam-Tan-Nhang-.jpg" alt="">
+                                </a>
+                                <a href="" class="product__quickview">xem nhanh</a>
+                                <div class="product__add--cart">
+                                    <a href="">
+                                        <i class="fas fa-shopping-basket"></i> Thêm giỏ hàng
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product__info">
+                                <h3 class="product__title">
+                                    <a href="">Sắc Mộc Lam Trị Mụn, Nám, Tàn Nhang</a>
+                                </h3>
+                                <div class="product__price">
+                                    <ins class="product__price--new">450.000 đ</ins>
+                                    <del class="product__price--old">570.000 đ</del>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="product__thumb">
+                                <a href="" class="product__img">
+                                    <img src="~/assets/img/Sac-Moc-Lam-Tri-Mun-Nam-Tan-Nhang-.jpg" alt="">
+                                </a>
+                                <a href="" class="product__quickview">xem nhanh</a>
+                                <div class="product__add--cart">
+                                    <a href="">
+                                        <i class="fas fa-shopping-basket"></i> Thêm giỏ hàng
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product__info">
+                                <h3 class="product__title">
+                                    <a href="">Sắc Mộc Lam Trị Mụn, Nám, Tàn Nhang</a>
+                                </h3>
+                                <div class="product__price">
+                                    <ins class="product__price--new">450.000 đ</ins>
+                                    <del class="product__price--old">570.000 đ</del>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="product__thumb">
+                                <a href="" class="product__img">
+                                    <img src="~/assets/img/Sac-Moc-Lam-Tri-Mun-Nam-Tan-Nhang-.jpg" alt="">
+                                </a>
+                                <a href="" class="product__quickview">xem nhanh</a>
+                                <div class="product__add--cart">
+                                    <a href="">
+                                        <i class="fas fa-shopping-basket"></i> Thêm giỏ hàng
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product__info">
+                                <h3 class="product__title">
+                                    <a href="">Sắc Mộc Lam Trị Mụn, Nám, Tàn Nhang</a>
+                                </h3>
+                                <div class="product__price">
+                                    <ins class="product__price--new">450.000 đ</ins>
+                                    <del class="product__price--old">570.000 đ</del>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content__item">
+                        <div class="product">
+                            <div class="product__thumb">
+                                <a href="" class="product__img">
+                                    <img src="~/assets/img/Sac-Moc-Lam-Tri-Mun-Nam-Tan-Nhang-.jpg" alt="">
+                                </a>
+                                <a href="" class="product__quickview">xem nhanh</a>
+                                <div class="product__add--cart">
+                                    <a href="">
+                                        <i class="fas fa-shopping-basket"></i> Thêm giỏ hàng
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product__info">
+                                <h3 class="product__title">
+                                    <a href="">Sắc Mộc Lam Trị Mụn, Nám, Tàn Nhang</a>
+                                </h3>
+                                <div class="product__price">
+                                    <ins class="product__price--new">450.000 đ</ins>
+                                    <del class="product__price--old">570.000 đ</del>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="product__thumb">
+                                <a href="" class="product__img">
+                                    <img src="~/assets/img/Sac-Moc-Lam-Tri-Mun-Nam-Tan-Nhang-.jpg" alt="">
+                                </a>
+                                <a href="" class="product__quickview">xem nhanh</a>
+                                <div class="product__add--cart">
+                                    <a href="">
+                                        <i class="fas fa-shopping-basket"></i> Thêm giỏ hàng
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product__info">
+                                <h3 class="product__title">
+                                    <a href="">Sắc Mộc Lam Trị Mụn, Nám, Tàn Nhang</a>
+                                </h3>
+                                <div class="product__price">
+                                    <ins class="product__price--new">450.000 đ</ins>
+                                    <del class="product__price--old">570.000 đ</del>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="product__thumb">
+                                <a href="" class="product__img">
+                                    <img src="~/assets/img/Sac-Moc-Lam-Tri-Mun-Nam-Tan-Nhang-.jpg" alt="">
+                                </a>
+                                <a href="" class="product__quickview">xem nhanh</a>
+                                <div class="product__add--cart">
+                                    <a href="">
+                                        <i class="fas fa-shopping-basket"></i> Thêm giỏ hàng
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product__info">
+                                <h3 class="product__title">
+                                    <a href="">Sắc Mộc Lam Trị Mụn, Nám, Tàn Nhang</a>
+                                </h3>
+                                <div class="product__price">
+                                    <ins class="product__price--new">450.000 đ</ins>
+                                    <del class="product__price--old">570.000 đ</del>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="product__thumb">
+                                <a href="" class="product__img">
+                                    <img src="~/assets/img/Sac-Moc-Lam-Tri-Mun-Nam-Tan-Nhang-.jpg" alt="">
+                                </a>
+                                <a href="" class="product__quickview">xem nhanh</a>
+                                <div class="product__add--cart">
+                                    <a href="">
+                                        <i class="fas fa-shopping-basket"></i> Thêm giỏ hàng
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product__info">
+                                <h3 class="product__title">
+                                    <a href="">Sắc Mộc Lam Trị Mụn, Nám, Tàn Nhang</a>
+                                </h3>
+                                <div class="product__price">
+                                    <ins class="product__price--new">450.000 đ</ins>
+                                    <del class="product__price--old">570.000 đ</del>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="product__thumb">
+                                <a href="" class="product__img">
+                                    <img src="~/assets/img/Sac-Moc-Lam-Tri-Mun-Nam-Tan-Nhang-.jpg" alt="">
+                                </a>
+                                <a href="" class="product__quickview">xem nhanh</a>
+                                <div class="product__add--cart">
+                                    <a href="">
+                                        <i class="fas fa-shopping-basket"></i> Thêm giỏ hàng
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product__info">
+                                <h3 class="product__title">
+                                    <a href="">Sắc Mộc Lam Trị Mụn, Nám, Tàn Nhang</a>
+                                </h3>
+                                <div class="product__price">
+                                    <ins class="product__price--new">450.000 đ</ins>
+                                    <del class="product__price--old">570.000 đ</del>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+<div class="category">
+    <div class="category__nav">
+        <a href="">
+            <h2>chăm sóc da mặt</h2>
+        </a>
+        <div class="navbar">
+            <ul>
+                <li><a href="" class="btn">sửa rửa mặt</a></li>
+                <li><a href="" class="btn">nước tẩy trang</a></li>
+                <li><a href="" class="btn">dưỡng trắng da mặt</a></li>
+                <li><a href="" class="btn">chống lão hóa da mặt</a></li>
+            </ul>
+        </div>
+        <a href="" class="category__more">Xem thêm</a>
+    </div>
+    <div class="category__content">
+        <div class="container">
+            <div class="content__left">
+                <div class="content__banner">
+                    <a href="">
+                        <img src="~/assets/img/cham-soc-da-mat-menu-left.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="content__right">
+                <div class="content__item">
+                    <div class="product">
+                        <div class="product__thumb">
+                            <a href="" class="product__img">
+                                <img src="~/assets/img/Sac-Moc-Lam-Tri-Mun-Nam-Tan-Nhang-.jpg" alt="">
+                            </a>
+                            <a href="" class="product__quickview">xem nhanh</a>
+                            <div class="product__add--cart">
+                                <a href="">
+                                    <i class="fas fa-shopping-basket"></i> Thêm giỏ hàng
+                                </a>
+                            </div>
+                        </div>
+                        <div class="product__info">
+                            <h3 class="product__title">
+                                <a href="">Sắc Mộc Lam Trị Mụn, Nám, Tàn Nhang</a>
+                            </h3>
+                            <div class="product__price">
+                                <ins class="product__price--new">450.000 đ</ins>
+                                <del class="product__price--old">570.000 đ</del>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product__thumb">
+                            <a href="" class="product__img">
+                                <img src="~/assets/img/Sac-Moc-Lam-Tri-Mun-Nam-Tan-Nhang-.jpg" alt="">
+                            </a>
+                            <a href="" class="product__quickview">xem nhanh</a>
+                            <div class="product__add--cart">
+                                <a href="">
+                                    <i class="fas fa-shopping-basket"></i> Thêm giỏ hàng
+                                </a>
+                            </div>
+                        </div>
+                        <div class="product__info">
+                            <h3 class="product__title">
+                                <a href="">Sắc Mộc Lam Trị Mụn, Nám, Tàn Nhang</a>
+                            </h3>
+                            <div class="product__price">
+                                <ins class="product__price--new">450.000 đ</ins>
+                                <del class="product__price--old">570.000 đ</del>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product__thumb">
+                            <a href="" class="product__img">
+                                <img src="~/assets/img/Sac-Moc-Lam-Tri-Mun-Nam-Tan-Nhang-.jpg" alt="">
+                            </a>
+                            <a href="" class="product__quickview">xem nhanh</a>
+                            <div class="product__add--cart">
+                                <a href="">
+                                    <i class="fas fa-shopping-basket"></i> Thêm giỏ hàng
+                                </a>
+                            </div>
+                        </div>
+                        <div class="product__info">
+                            <h3 class="product__title">
+                                <a href="">Sắc Mộc Lam Trị Mụn, Nám, Tàn Nhang</a>
+                            </h3>
+                            <div class="product__price">
+                                <ins class="product__price--new">450.000 đ</ins>
+                                <del class="product__price--old">570.000 đ</del>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product__thumb">
+                            <a href="" class="product__img">
+                                <img src="~/assets/img/Sac-Moc-Lam-Tri-Mun-Nam-Tan-Nhang-.jpg" alt="">
+                            </a>
+                            <a href="" class="product__quickview">xem nhanh</a>
+                            <div class="product__add--cart">
+                                <a href="">
+                                    <i class="fas fa-shopping-basket"></i> Thêm giỏ hàng
+                                </a>
+                            </div>
+                        </div>
+                        <div class="product__info">
+                            <h3 class="product__title">
+                                <a href="">Sắc Mộc Lam Trị Mụn, Nám, Tàn Nhang</a>
+                            </h3>
+                            <div class="product__price">
+                                <ins class="product__price--new">450.000 đ</ins>
+                                <del class="product__price--old">570.000 đ</del>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product__thumb">
+                            <a href="" class="product__img">
+                                <img src="~/assets/img/Sac-Moc-Lam-Tri-Mun-Nam-Tan-Nhang-.jpg" alt="">
+                            </a>
+                            <a href="" class="product__quickview">xem nhanh</a>
+                            <div class="product__add--cart">
+                                <a href="">
+                                    <i class="fas fa-shopping-basket"></i> Thêm giỏ hàng
+                                </a>
+                            </div>
+                        </div>
+                        <div class="product__info">
+                            <h3 class="product__title">
+                                <a href="">Sắc Mộc Lam Trị Mụn, Nám, Tàn Nhang</a>
+                            </h3>
+                            <div class="product__price">
+                                <ins class="product__price--new">450.000 đ</ins>
+                                <del class="product__price--old">570.000 đ</del>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content__item">
+                    <div class="product">
+                        <div class="product__thumb">
+                            <a href="" class="product__img">
+                                <img src="~/assets/img/Sac-Moc-Lam-Tri-Mun-Nam-Tan-Nhang-.jpg" alt="">
+                            </a>
+                            <a href="" class="product__quickview">xem nhanh</a>
+                            <div class="product__add--cart">
+                                <a href="">
+                                    <i class="fas fa-shopping-basket"></i> Thêm giỏ hàng
+                                </a>
+                            </div>
+                        </div>
+                        <div class="product__info">
+                            <h3 class="product__title">
+                                <a href="">Sắc Mộc Lam Trị Mụn, Nám, Tàn Nhang</a>
+                            </h3>
+                            <div class="product__price">
+                                <ins class="product__price--new">450.000 đ</ins>
+                                <del class="product__price--old">570.000 đ</del>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product__thumb">
+                            <a href="" class="product__img">
+                                <img src="~/assets/img/Sac-Moc-Lam-Tri-Mun-Nam-Tan-Nhang-.jpg" alt="">
+                            </a>
+                            <a href="" class="product__quickview">xem nhanh</a>
+                            <div class="product__add--cart">
+                                <a href="">
+                                    <i class="fas fa-shopping-basket"></i> Thêm giỏ hàng
+                                </a>
+                            </div>
+                        </div>
+                        <div class="product__info">
+                            <h3 class="product__title">
+                                <a href="">Sắc Mộc Lam Trị Mụn, Nám, Tàn Nhang</a>
+                            </h3>
+                            <div class="product__price">
+                                <ins class="product__price--new">450.000 đ</ins>
+                                <del class="product__price--old">570.000 đ</del>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product__thumb">
+                            <a href="" class="product__img">
+                                <img src="~/assets/img/Sac-Moc-Lam-Tri-Mun-Nam-Tan-Nhang-.jpg" alt="">
+                            </a>
+                            <a href="" class="product__quickview">xem nhanh</a>
+                            <div class="product__add--cart">
+                                <a href="">
+                                    <i class="fas fa-shopping-basket"></i> Thêm giỏ hàng
+                                </a>
+                            </div>
+                        </div>
+                        <div class="product__info">
+                            <h3 class="product__title">
+                                <a href="">Sắc Mộc Lam Trị Mụn, Nám, Tàn Nhang</a>
+                            </h3>
+                            <div class="product__price">
+                                <ins class="product__price--new">450.000 đ</ins>
+                                <del class="product__price--old">570.000 đ</del>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product__thumb">
+                            <a href="" class="product__img">
+                                <img src="~/assets/img/Sac-Moc-Lam-Tri-Mun-Nam-Tan-Nhang-.jpg" alt="">
+                            </a>
+                            <a href="" class="product__quickview">xem nhanh</a>
+                            <div class="product__add--cart">
+                                <a href="">
+                                    <i class="fas fa-shopping-basket"></i> Thêm giỏ hàng
+                                </a>
+                            </div>
+                        </div>
+                        <div class="product__info">
+                            <h3 class="product__title">
+                                <a href="">Sắc Mộc Lam Trị Mụn, Nám, Tàn Nhang</a>
+                            </h3>
+                            <div class="product__price">
+                                <ins class="product__price--new">450.000 đ</ins>
+                                <del class="product__price--old">570.000 đ</del>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product__thumb">
+                            <a href="" class="product__img">
+                                <img src="~/assets/img/Sac-Moc-Lam-Tri-Mun-Nam-Tan-Nhang-.jpg" alt="">
+                            </a>
+                            <a href="" class="product__quickview">xem nhanh</a>
+                            <div class="product__add--cart">
+                                <a href="">
+                                    <i class="fas fa-shopping-basket"></i> Thêm giỏ hàng
+                                </a>
+                            </div>
+                        </div>
+                        <div class="product__info">
+                            <h3 class="product__title">
+                                <a href="">Sắc Mộc Lam Trị Mụn, Nám, Tàn Nhang</a>
+                            </h3>
+                            <div class="product__price">
+                                <ins class="product__price--new">450.000 đ</ins>
+                                <del class="product__price--old">570.000 đ</del>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="category">
+    <div class="category__nav">
+        <a href="">
+            <h2>chăm sóc toàn thân</h2>
+        </a>
+        <div class="navbar">
+            <ul>
+                <li><a href="" class="btn">kem tẩy lông</a></li>
+                <li><a href="" class="btn">kem chống nắng</a></li>
+                <li><a href="" class="btn">sữa tắm trắng da</a></li>
+                <li><a href="" class="btn">kem dưỡng da tay</a></li>
+            </ul>
+        </div>
+        <a href="" class="category__more">Xem thêm</a>
+    </div>
+    <div class="category__content">
+        <div class="container">
+            <div class="content__left">
+                <div class="content__banner">
+                    <a href="">
+                        <img src="~/assets/img/cham-soc-toan-than-menu-left.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="content__right">
+                <div class="content__item">
+                    <div class="product">
+                        <div class="product__thumb">
+                            <a href="" class="product__img">
+                                <img src="~/assets/img/Sac-Moc-Lam-Tri-Mun-Nam-Tan-Nhang-.jpg" alt="">
+                            </a>
+                            <a href="" class="product__quickview">xem nhanh</a>
+                            <div class="product__add--cart">
+                                <a href="">
+                                    <i class="fas fa-shopping-basket"></i> Thêm giỏ hàng
+                                </a>
+                            </div>
+                        </div>
+                        <div class="product__info">
+                            <h3 class="product__title">
+                                <a href="">Sắc Mộc Lam Trị Mụn, Nám, Tàn Nhang</a>
+                            </h3>
+                            <div class="product__price">
+                                <ins class="product__price--new">450.000 đ</ins>
+                                <del class="product__price--old">570.000 đ</del>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product__thumb">
+                            <a href="" class="product__img">
+                                <img src="~/assets/img/Sac-Moc-Lam-Tri-Mun-Nam-Tan-Nhang-.jpg" alt="">
+                            </a>
+                            <a href="" class="product__quickview">xem nhanh</a>
+                            <div class="product__add--cart">
+                                <a href="">
+                                    <i class="fas fa-shopping-basket"></i> Thêm giỏ hàng
+                                </a>
+                            </div>
+                        </div>
+                        <div class="product__info">
+                            <h3 class="product__title">
+                                <a href="">Sắc Mộc Lam Trị Mụn, Nám, Tàn Nhang</a>
+                            </h3>
+                            <div class="product__price">
+                                <ins class="product__price--new">450.000 đ</ins>
+                                <del class="product__price--old">570.000 đ</del>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product__thumb">
+                            <a href="" class="product__img">
+                                <img src="~/assets/img/Sac-Moc-Lam-Tri-Mun-Nam-Tan-Nhang-.jpg" alt="">
+                            </a>
+                            <a href="" class="product__quickview">xem nhanh</a>
+                            <div class="product__add--cart">
+                                <a href="">
+                                    <i class="fas fa-shopping-basket"></i> Thêm giỏ hàng
+                                </a>
+                            </div>
+                        </div>
+                        <div class="product__info">
+                            <h3 class="product__title">
+                                <a href="">Sắc Mộc Lam Trị Mụn, Nám, Tàn Nhang</a>
+                            </h3>
+                            <div class="product__price">
+                                <ins class="product__price--new">450.000 đ</ins>
+                                <del class="product__price--old">570.000 đ</del>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product__thumb">
+                            <a href="" class="product__img">
+                                <img src="~/assets/img/Sac-Moc-Lam-Tri-Mun-Nam-Tan-Nhang-.jpg" alt="">
+                            </a>
+                            <a href="" class="product__quickview">xem nhanh</a>
+                            <div class="product__add--cart">
+                                <a href="">
+                                    <i class="fas fa-shopping-basket"></i> Thêm giỏ hàng
+                                </a>
+                            </div>
+                        </div>
+                        <div class="product__info">
+                            <h3 class="product__title">
+                                <a href="">Sắc Mộc Lam Trị Mụn, Nám, Tàn Nhang</a>
+                            </h3>
+                            <div class="product__price">
+                                <ins class="product__price--new">450.000 đ</ins>
+                                <del class="product__price--old">570.000 đ</del>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product__thumb">
+                            <a href="" class="product__img">
+                                <img src="~/assets/img/Sac-Moc-Lam-Tri-Mun-Nam-Tan-Nhang-.jpg" alt="">
+                            </a>
+                            <a href="" class="product__quickview">xem nhanh</a>
+                            <div class="product__add--cart">
+                                <a href="">
+                                    <i class="fas fa-shopping-basket"></i> Thêm giỏ hàng
+                                </a>
+                            </div>
+                        </div>
+                        <div class="product__info">
+                            <h3 class="product__title">
+                                <a href="">Sắc Mộc Lam Trị Mụn, Nám, Tàn Nhang</a>
+                            </h3>
+                            <div class="product__price">
+                                <ins class="product__price--new">450.000 đ</ins>
+                                <del class="product__price--old">570.000 đ</del>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content__item">
+                    <div class="product">
+                        <div class="product__thumb">
+                            <a href="" class="product__img">
+                                <img src="~/assets/img/Sac-Moc-Lam-Tri-Mun-Nam-Tan-Nhang-.jpg" alt="">
+                            </a>
+                            <a href="" class="product__quickview">xem nhanh</a>
+                            <div class="product__add--cart">
+                                <a href="">
+                                    <i class="fas fa-shopping-basket"></i> Thêm giỏ hàng
+                                </a>
+                            </div>
+                        </div>
+                        <div class="product__info">
+                            <h3 class="product__title">
+                                <a href="">Sắc Mộc Lam Trị Mụn, Nám, Tàn Nhang</a>
+                            </h3>
+                            <div class="product__price">
+                                <ins class="product__price--new">450.000 đ</ins>
+                                <del class="product__price--old">570.000 đ</del>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product__thumb">
+                            <a href="" class="product__img">
+                                <img src="~/assets/img/Sac-Moc-Lam-Tri-Mun-Nam-Tan-Nhang-.jpg" alt="">
+                            </a>
+                            <a href="" class="product__quickview">xem nhanh</a>
+                            <div class="product__add--cart">
+                                <a href="">
+                                    <i class="fas fa-shopping-basket"></i> Thêm giỏ hàng
+                                </a>
+                            </div>
+                        </div>
+                        <div class="product__info">
+                            <h3 class="product__title">
+                                <a href="">Sắc Mộc Lam Trị Mụn, Nám, Tàn Nhang</a>
+                            </h3>
+                            <div class="product__price">
+                                <ins class="product__price--new">450.000 đ</ins>
+                                <del class="product__price--old">570.000 đ</del>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product__thumb">
+                            <a href="" class="product__img">
+                                <img src="~/assets/img/Sac-Moc-Lam-Tri-Mun-Nam-Tan-Nhang-.jpg" alt="">
+                            </a>
+                            <a href="" class="product__quickview">xem nhanh</a>
+                            <div class="product__add--cart">
+                                <a href="">
+                                    <i class="fas fa-shopping-basket"></i> Thêm giỏ hàng
+                                </a>
+                            </div>
+                        </div>
+                        <div class="product__info">
+                            <h3 class="product__title">
+                                <a href="">Sắc Mộc Lam Trị Mụn, Nám, Tàn Nhang</a>
+                            </h3>
+                            <div class="product__price">
+                                <ins class="product__price--new">450.000 đ</ins>
+                                <del class="product__price--old">570.000 đ</del>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product__thumb">
+                            <a href="" class="product__img">
+                                <img src="~/assets/img/Sac-Moc-Lam-Tri-Mun-Nam-Tan-Nhang-.jpg" alt="">
+                            </a>
+                            <a href="" class="product__quickview">xem nhanh</a>
+                            <div class="product__add--cart">
+                                <a href="">
+                                    <i class="fas fa-shopping-basket"></i> Thêm giỏ hàng
+                                </a>
+                            </div>
+                        </div>
+                        <div class="product__info">
+                            <h3 class="product__title">
+                                <a href="">Sắc Mộc Lam Trị Mụn, Nám, Tàn Nhang</a>
+                            </h3>
+                            <div class="product__price">
+                                <ins class="product__price--new">450.000 đ</ins>
+                                <del class="product__price--old">570.000 đ</del>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product__thumb">
+                            <a href="" class="product__img">
+                                <img src="~/assets/img/Sac-Moc-Lam-Tri-Mun-Nam-Tan-Nhang-.jpg" alt="">
+                            </a>
+                            <a href="" class="product__quickview">xem nhanh</a>
+                            <div class="product__add--cart">
+                                <a href="">
+                                    <i class="fas fa-shopping-basket"></i> Thêm giỏ hàng
+                                </a>
+                            </div>
+                        </div>
+                        <div class="product__info">
+                            <h3 class="product__title">
+                                <a href="">Sắc Mộc Lam Trị Mụn, Nám, Tàn Nhang</a>
+                            </h3>
+                            <div class="product__price">
+                                <ins class="product__price--new">450.000 đ</ins>
+                                <del class="product__price--old">570.000 đ</del>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="banner">
+    <div class="container">
+        <div class="banner__img">
+            <a href="">
+                <img src="~/assets/img/100-hai-long-3.jpg" alt="">
+            </a>
+        </div>
+    </div>
+</div>
+<div class="news">
+    <div class="title">
+        <h4>Tin nổi bật</h4>
+        <div class="slide">
+            <a href="">
+                <i class="fas fa-angle-left"></i>
+            </a>
+            <a href="">
+                <i class="fas fa-angle-right"></i>
+            </a>
+        </div>
+    </div>
+    <div class="container">
+        @foreach (var tin in Model.TinTuc)
+        {
+            <div class="product">
+                <div class="product__thumb">
+                    @{ string anh = "~/assets/img/" + tin.AnhTinTuc; }
+                    <a href="" class="product__img">
+                        <img src="@Url.Content(anh)" alt="">
+                    </a>
+                </div>
+                <div class="product__info">
+                    <h3 class="product__title">
+                        <a href="">@tin.TieuDe</a>
+                    </h3>
+                    <div class="product__subtitle">
+                        <p>
+                            @tin.TomTat
+                        </p>
+                    </div>
+                </div>
+            </div>
+         }
+
+        <div class="product">
+            <div class="product__thumb">
+                <a href="" class="product__img">
+                    <img src="~/assets/img/MEO-GIUP-TRI-TOC-RUNG-SAU-SINH-NHANH-CHONG-.png" alt="">
+                </a>
+            </div>
+            <div class="product__info">
+                <h3 class="product__title">
+                    <a href="">MẸO GIÚP TRỊ TÓC RỤNG SAU SINH NHANH CHÓNG</a>
+                </h3>
+                <div class="product__subtitle">
+                    <p>
+                        Sau khi sinh con, một hiện tượng thường thấy là tóc của các bà mẹ rụng rất nhiều. Điều này có nguy hiểm
+                        gì hay không? Có cần tìm phương pháp trị tóc rụng sau sinh không? Bạn hãy cùng tìm hiểu qua bài viết sau
+                        nha!
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="product">
+            <div class="product__thumb">
+                <a href="" class="product__img">
+                    <img src="~/assets/img/BI-QUYET-CHUA-TOC-RUNG-NHIEU-TU-THIEN-NHIEN-.jpg" alt="">
+                </a>
+            </div>
+            <div class="product__info">
+                <h3 class="product__title">
+                    <a href="">BÍ QUYẾT CHỮA TÓC RỤNG NHIỀU TỪ THIÊN NHIÊN</a>
+                </h3>
+                <div class="product__subtitle">
+                    <p>
+                        Nếu như bạn đang tìm cho mình cách chữa rụng tóc nhiều thì không nên bỏ qua bài viết này nhé:
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="product">
+            <div class="product__thumb">
+                <a href="" class="product__img">
+                    <img src="~/assets/img/CACH-CHUA-RUNG-TOC-DAN-GIAN-DON-GIAN-HIEU-QUA-.png" alt="">
+                </a>
+            </div>
+            <div class="product__info">
+                <h3 class="product__title">
+                    <a href="">CÁCH CHỮA RỤNG TÓC DÂN GIAN ĐƠN GIẢN HIỆU QUẢ</a>
+                </h3>
+                <div class="product__subtitle">
+                    <p>
+                        Khi tình trạng rụng tóc chưa trầm trọng, bạn hãy áp dụng những cách chữa rụng tóc dân gian cùng những
+                        mẹo vặt sau đây để cải thiện tình trạng của mình nhé.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="product" style="display: none">
+            <div class="product__thumb">
+                <a href="" class="product__img">
+                    <img src="~/assets/img/BI-QUYET-TRI-RUNG-TOC-HIEU-QUA-TAI-NHA-.jpg" alt="">
+                </a>
+            </div>
+            <div class="product__info">
+                <h3 class="product__title">
+                    <a href="">BÍ QUYẾT TRỊ RỤNG TÓC HIỆU QUẢ TẠI NHÀ</a>
+                </h3>
+                <div class="product__subtitle">
+                    <p>
+                        Trị rụng tóc sẽ đơn giản hơn khi bạn tìm được cho mình được nguyên nhân gây rụng tóc cũng như biết kết
+                        hợp giữa các biện pháp chữa rụng tóc và bổ sung thực phẩm, chất dinh dưỡng cho tóc.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="product" style="display: none">
+            <div class="product__thumb">
+                <a href="" class="product__img">
+                    <img src="~/assets/img/TOP-5-CACH-CHUA-RUNG-TOC-HIEU-QUA-.jpg" alt="">
+                </a>
+            </div>
+            <div class="product__info">
+                <h3 class="product__title">
+                    <a href="">TOP 5 CÁCH CHỮA RỤNG TÓC HIỆU QUẢ</a>
+                </h3>
+                <div class="product__subtitle">
+                    <p>
+                        Chữa rụng tóc hiệu quả và nhanh chóng hơn với những nguyên liệu từ thiên nhiên an toàn, đem lại hiệu quả
+                        cực tốt.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,348 @@
+﻿@model IEnumerable<ShopMyPham.Models.DanhMuc>
+
+<div class="header__bottom">
+    <nav class="nav">
+        <div class="container">
+            <ul class="nav__menu">
+                <li class="nav__item">
+                    <a href="" class="nav__link">
+                        <i class="fas fa-bars"></i>
+                        danh mục sản phẩm
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul class="nav__dropdown">
+                        @foreach (var item in Model)
+                        {
+                            <li class="nav__item">
+
+                                <a href="" class="nav__link">
+                                    <span>@Html.DisplayFor(modelItem => item.TenDM)</span>
+                                    <img src="~/assets/img/my-pham-trang-diem-icon.png" alt="my-pham-trang-diem">
+                                </a>
+                                <ul class="sub__nav">
+                                    <div class="nav__item--category">
+                                    <li class="nav__item">
+                                        <h4>@item.TenDM</h4>
+                                    </li>
+                                    @{
+                                        Html.RenderAction("LoaiSP", "Home", new { id = item.MaDM });
+                                    }
+
+
+
+</div>
+                                        <div class="nav__item--img">
+                                            <a href="">
+                                                <img src="~/assets/img/my-pham-trang-diem-menu-right.jpg" alt="">
+                                            </a>
+                                        </div>
+                                  </ul>
+                            </li>
+
+                            }
+
+                            
+                    <li class="nav__item">
+                        <a href="" class="nav__link">
+                            <span>chăm sóc da mặt</span>
+                            <img src="~/assets/img/cham-soc-da-mat-icon.png" alt="">
+                        </a>
+                        <ul class="sub__nav">
+                            <div class="nav__item--category">
+                            <li class="nav__item">
+                                <h4>chăm sóc da mặt</h4>
+                            </li>
+                            <li class="nav__item">
+                                <a href="" class="nav__link">sữa rửa mặt</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="" class="nav__link">nước tẩy trang</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="" class="nav__link">dưỡng trắng da mặt</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="" class="nav__link">chống lão hoá da mặt</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="" class="nav__link">mặt nạ dưỡng da mặt</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="" class="nav__link">tẩy tế bào chết cho da</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="" class="nav__link">nước hoa hồng, xịt khoáng</a>
+                            </li>
+                            </div>
+                            <div class="nav__item--img">
+                                <a href="">
+                                    <img src="~/assets/img/cham-soc-da-mat-menu-right.jpg" alt="">
+                                </a>
+                            </div>
+                        </ul>
+                    </li>
+                    <li class="nav__item">
+                        <a href="" class="nav__link">
+                            <span>chăm sóc toàn thân</span>
+                            <img src="~/assets/img/cham-soc-toan-than-icon.png" alt="">
+                        </a>
+                        <ul class="sub__nav">
+                            <div class="nav__item--category">
+                            <li class="nav__item">
+                                <h4>chăm sóc toàn thân</h4>
+                            </li>
+                            <li class="nav__item">
+                                <a href="" class="nav__link">kem tẩy lông</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="" class="nav__link">kem chống nắng</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="" class="nav__link">sữa tắm trắng da</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="" class="nav__link">xịt thơm, xịt khử mùi</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="" class="nav__link">kem dưỡng da tay</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="" class="nav__link">dưỡng trắng da toàn thân</a>
+                            </li>
+                            </div>
+                            <div class="nav__item--img">
+                                <a href="">
+                                    <img src="~/assets/img/cham-soc-toan-than-menu-right.jpg" alt="">
+                                </a>
+                            </div>
+                        </ul>
+                    </li>
+                    <li class="nav__item">
+                        <a href="" class="nav__link">
+                            <span>chăm sóc tóc</span>
+                            <img src="~/assets/img/my-pham-cham-soc-toc-icon.png" alt="">
+                        </a>
+                        <ul class="sub__nav">
+                            <div class="nav__item--category">
+                            <li class="nav__item">
+                                <h4>chăm sóc tóc</h4>
+                            </li>
+                            <li class="nav__item">
+                                <a href="" class="nav__link">dầu gội khô</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="" class="nav__link">xịt dưỡng tóc</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="" class="nav__link">dầu gội dầu xả tóc</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="" class="nav__link">dầu dừa dưỡng tóc</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="" class="nav__link">kem ủ, thuốc nhuộm tóc</a>
+                            </li>
+                            </div>
+                            <div class="nav__item--img">
+                                <a href="">
+                                    <img src="~/assets/img/my-pham-cham-soc-toc-menu-right.jpg" alt="">
+                                </a>
+                            </div>
+                        </ul>
+                    </li>
+                    <li class="nav__item">
+                        <a href="" class="nav__link">
+                            <span>thương hiệu ưa chuộng</span>
+                            <img src="~/assets/img/thuong-hieu-ua-chuong-icon.png" alt="">
+                        </a>
+                        <ul class="sub__nav">
+                            <div class="nav__item--category">
+                            <li class="nav__item">
+                                <h4>thương hiệu ưa chuộng</h4>
+                            </li>
+                            <li class="nav__item">
+                                <a href="" class="nav__link">thương hiệu pháp</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="" class="nav__link">thương hiệu mỹ</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="" class="nav__link">thương hiệu nhật bản</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="" class="nav__link">mỹ phẩm hàn quốc</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="" class="nav__link">thương hiệu thái lan</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="" class="nav__link">thương hiệu nga</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="" class="nav__link">thương hiệu úc</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="" class="nav__link">Các Thương Hiệu Khác</a>
+                            </li>
+                            </div>
+                            <div class="nav__item--img">
+                                <a href="">
+                                    <img src="~/assets/img/thuong-hieu-ua-chuong-menu-right.jpg" alt="">
+                                </a>
+                            </div>
+                        </ul>
+                    </li>
+                    <li class="nav__item">
+                        <a href="" class="nav__link">
+                            <span>sức khoẻ dinh dưỡng</span>
+                            <img src="~/assets/img/suc-khoe-dinh-duong-icon.png" alt="">
+                        </a>
+                        <ul class="sub__nav">
+                            <div class="nav__item--category">
+                            <li class="nav__item">
+                                <h4>sức khoẻ dinh dưỡng</h4>
+                            </li>
+                            <li class="nav__item">
+                                <a href="" class="nav__link">dầu dừa nguyên chất</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="" class="nav__link">mật ong thiên nhiên</a>
+                            </li>
+                            </div>
+                            <div class="nav__item--img">
+                                <a href="">
+                                    <img src="~/assets/img/suc-khoe-dinh-duong-menu-right.jpg" alt="">
+                                </a>
+                            </div>
+                        </ul>
+                    </li>
+                    <li class="nav__item">
+                        <a href="" class="nav__link">
+                            <span>các sản phẩm khác</span>
+                            <img src="~/assets/img/sale-off-moi-tuan-icon.png" alt="">
+                        </a>
+                        <ul class="sub__nav">
+                            <div class="nav__item--category">
+                            <li class="nav__item">
+                                <h4>các sản phẩm khác</h4>
+                            </li>
+                            <li class="nav__item">
+                                <a href="" class="nav__link">phụ kiện làm đẹp</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="" class="nav__link">nước hoa chính hãng</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="" class="nav__link">các dòng mỹ phẩm khác</a>
+                            </li>
+                            </div>
+                            <div class="nav__item--img">
+                                <a href="">
+                                    <img src="~/assets/img/sale-off-moi-tuan-menu-right.jpg" alt="">
+                                </a>
+                            </div>
+                        </ul>
+                    </li>
+                    </ul>
+                    </li>
+                    <li class="nav__item">
+                        <a href="" class="nav__link">hướng dẫn mua hàng</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="" class="nav__link">tin nổi bật</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="" class="nav__link">sản phẩm sale off</a>
+                        <ul class="nav__dropdown">
+                            <div>
+                            <li class="nav__item">
+                                <div class="nav__item--img">
+                                    <a href="">
+                                        <img src="~/assets/img/26.jpg" alt="">
+                                    </a>
+                                </div>
+                                <h4 class="nav__item--title">
+                                    <a href="">sản phẩm sale off từ 10% - 40%</a>
+                                </h4>
+                                <p class="nav__item--desc">
+                                    Khi đến với IMUA.com.vn bạn sẽ mua được những sản phẩm chất lượng và có cơ hội được sale off đến
+                                    50%
+                                    kèm theo nhiều quà tặng hấp dẫn khác
+                                </p>
+                            </li>
+                            <li class="nav__item">
+                                <div>
+                                    <h4>danh sách sản phẩm</h4>
+                                    <div class="slide">
+                                        <a href="">
+                                            <i class="fas fa-angle-left"></i>
+                                        </a>
+                                        <a href="">
+                                            <i class="fas fa-angle-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="product">
+                                        <div class="product__thumb">
+                                            <a href="" class="product__img">
+                                                <img src="~/assets/img/Bo-Kem-Tri-Nam-Clobetamil-G-.jpg" alt="">
+                                            </a>
+                                            <a href="" class="product__quickview">xem nhanh</a>
+                                            <div class="product__add--cart">
+                                                <a href="">
+                                                    <i class="fas fa-shopping-basket"></i> Thêm giỏ hàng
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="product__info">
+                                            <h3 class="product__title">
+                                                <a href="">Bộ Kem Trị Nám Clobetamil G Chính Hãng Thái Lan</a>
+                                            </h3>
+                                            <div class="product__price">
+                                                <ins class="product__price--new">150.000 đ</ins>
+                                                <del class="product__price--old">195.000 đ</del>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product">
+                                        <div class="product__thumb">
+                                            <a href="" class="product__img">
+                                                <img src="~/assets/img/Son-Duong-Moi-co-mau-Ecosy-Nature-Tint-Stick-The-Collagen-.jpg"
+                                                     alt="">
+                                            </a>
+                                            <a href="" class="product__quickview">xem nhanh</a>
+                                            <div class="product__add--cart">
+                                                <a href="">
+                                                    <i class="fas fa-shopping-basket"></i> Thêm giỏ hàng
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="product__info">
+                                            <h3 class="product__title">
+                                                <a href="">Son Dưỡng Môi có màu Ecosy Nature Tint Stick The Collagen</a>
+                                            </h3>
+                                            <div class="product__price">
+                                                <ins class="product__price--new">200.000 đ</ins>
+                                                <del class="product__price--old">270.000 đ</del>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            </div>
+                        </ul>
+                    </li>
+                    <li class="nav__item">
+                        <a href="" class="nav__link">kho quà tặng</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="" class="nav__link">liên hệ</a>
+                    </li>
+                    </ul>
+                    </div>
+                    </nav>
+                    </div>
+
+
+

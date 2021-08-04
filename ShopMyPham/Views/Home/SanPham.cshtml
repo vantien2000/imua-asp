@@ -1,0 +1,27 @@
+﻿@model IEnumerable<ShopMyPham.Models.SanPham>
+@foreach (var sanPham in Model)
+{
+    <div class="product">
+        <div class="product__thumb">
+            @{string path = "~/assets/img/" + sanPham.AnhDaiDien;}
+            <a href="" class="product__img">
+                <img src="@Url.Content(path)" alt="ảnh">
+            </a>
+            <a href="" class="product__quickview">xem nhanh</a>
+            <div class="product__add--cart">
+                <a href="">
+                    <i class="fas fa-shopping-basket"></i> Thêm giỏ hàng
+                </a>
+            </div>
+        </div>
+        <div class="product__info">
+            <h3 class="product__title">
+                <a href="">@sanPham.TenSP</a>
+            </h3>
+            <div class="product__price">
+                <ins class="product__price--new">@string.Format("{0:c0}",sanPham.GiaCu) </ins>
+                <del class="product__price--old">@string.Format("{0:c0}", sanPham.GiaMoi) </del>
+            </div>
+        </div>
+    </div>
+}

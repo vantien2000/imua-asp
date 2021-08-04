@@ -1,0 +1,143 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link rel="shortcut icon" href="~/assets/img/iconlogo.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+          integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+          crossorigin="anonymous" />
+    <link href="~/assets/css/reset.css" rel="stylesheet" />
+    <link href="~/assets/css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <div class="header__top">
+            <div class="container">
+                <p class="header__top--hotline">
+                    Hotline: <a href="tel: 0911 403 114">0911 403 114</a>
+                </p>
+                <p class="header__top--regis">
+                    <a href="#">Đăng ký</a>
+                </p>
+                <p class="header__top--login">
+                    <a href="#">Đăng nhập</a>
+                </p>
+            </div>
+        </div>
+        <div class="header__middle">
+            <div class="container">
+                <div class="header__middle--img">
+                    <a href="#" class="header__middle--logo">
+                        <img src="~/assets/img/logo.png" alt="logo">
+                    </a>
+                    <a href="#" class="header__middle--sologan">
+                        <img src="~/assets/img/sologan.png" alt="sologan">
+                    </a>
+                </div>
+                <div class="wrapper">
+                    <div class="header__middle--search">
+                        <form action="" class="header__search--input">
+                            <input type="text" name="" id="" placeholder="Tìm kiếm sản phẩm...">
+                            <button type="button" class="header__search--icon">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="header__middle--cart">
+                        <a href="#" class="header__middle--cart--link">
+                            <span class="cart__icon">
+                                <i class="fas fa-shopping-basket"></i>
+                            </span>
+                            <span class="cart__number">(0)</span>
+                        </a>
+                        <div class="header__middle--cart--noti">
+                            <span>Chưa có sản phẩm trong giỏ hàng!</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--header bottom-->
+        @{ Html.RenderAction("DanhMuc","Home"); }
+        <!--End header bottom-->
+    </header>
+    <main class="content">
+        @RenderBody()
+    </main>
+    <!--end main content-->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__item">
+                <h4>Hỗ trợ khách hàng</h4>
+                <p>
+                    <a href="">Hỗ trợ mua hàng</a>
+                    <br>
+                    <a href="">Chính sách đổi trả</a>
+                    <br>
+                    <a href="">Quy định vận chuyển</a>
+                    <br>
+                    <a href="">Phương thức thanh toán</a>
+                    <br>
+                    <a href="">Chính sách bảo mật</a>
+                </p>
+            </div>
+            <div class="footer__item">
+                <h4>Website thuộc quyền</h4>
+                <p>
+                    CÔNG TY TNHH HV NET
+                    <br>
+                    ĐKKD Số: 0313411135
+                    <br>
+                    Do Sở KH&ĐT Tp. HCM
+                    <br>
+                    Cấp ngày 24/08/2015
+                    <br>
+                    <a href="">
+                        <img src="~/assets/img/DangKyBoCongThuong.png" alt="BCT">
+                    </a>
+                </p>
+            </div>
+            <div class="footer__item">
+                <h4>Trung tâm phân phối</h4>
+                <p>
+                    255 Bình Lợi, P.13, Q. Bình Thạnh, Tp. HCM
+                    <br>
+                    Tel: 0911 403 114 Email: info@imua.com.vn
+                    <br>
+                    Website: <a href="https://imua.com.vn/" target="_blank">www.imua.com.vn</a>
+                    <br>
+                    <a href="">
+                        <img src="~/assets/img/DMCA_logo-grn-btn150w.png" alt="DMCA">
+                    </a>
+                    <br>
+                    <a href="">
+                        <img src="~/assets/img/logohvnet.png" alt="">
+                        Được Marketing & Phân phối bởi
+                        <span style="color: #53b035">HV Net</span>
+                    </a>
+                </p>
+            </div>
+            <div class="footer__item">
+                <a href="">
+                    <img src="~/assets/img/address-shop1.jpg" alt="">
+                </a>
+            </div>
+        </div>
+    </footer>
+    <!--End footer-->
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    <script src="~/assets/js/main.js"></script>
+
+</body>
+</html>
